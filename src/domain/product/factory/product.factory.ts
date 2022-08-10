@@ -18,4 +18,11 @@ export default class ProductFactory {
         throw new Error("Product type not supported");
     }
   }
+
+  public static createProductA(
+    name: string,
+    price: number
+  ): Product {
+	return new Product(uuid(), name, price);
+  }
 }
